@@ -1,0 +1,9 @@
+name = "tb-cv-ai"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# Optional durable daily limits:
+#   npx wrangler kv namespace create LIMITS   (then paste the id below)
+# [[kv_namespaces]]
+# binding = "LIMITS"
+# id = "PASTE_ID_HERE"

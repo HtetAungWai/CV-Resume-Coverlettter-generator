@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>CV, Resume & Cover Letter Workshop · TechBridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Orbitron:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style id="dcss"></style>
+  </head>
+  <body>
+    <canvas id="stars" aria-hidden="true"></canvas>
+    <nav class="top">
+      <div class="wrap bar">
+        <a class="brand" href="#basics">TechBridge<span>CV workshop</span></a>
+        <button
+          class="menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="tabs"
+        >
+          Menu
+        </button>
+        <div id="tabs">
+          <a href="#basics">Overview</a><a href="#anatomy">CV anatomy</a
+          ><a href="#write">Write it well</a><a href="#dos">Dos and don’ts</a
+          ><a href="#examples">Good vs bad</a><a href="#build">Build yours</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="wrap">
+      <section class="view" id="v-basics">
+        <div class="hero2">
+          <div>
+            <p class="kick">Long ago, in a recruiter’s inbox far, far away…</p>
+            <h1>
+              Your CV, resume and cover letter: <span>win the first look</span>
+            </h1>
+            <p class="lead">
+              Learn what each document is for, see what gets read and what gets
+              skipped, then build your own. An optional AI helper tightens your
+              wording but never invents facts.
+            </p>
+            <p>
+              <a class="btn pri" href="#build">Begin the mission</a>
+              <a class="btn" href="#anatomy">Study the briefing</a>
+            </p>
+          </div>
+          <div class="crawl" aria-label="Workshop intro">
+            <div>
+              <h3>Episode I<br />The Application</h3>
+              <p>
+                It is a period of fierce competition. Thousands of applicants
+                send their CVs into a galaxy of recruiters, who give each one
+                only seconds.
+              </p>
+              <p>
+                Your mission: learn the three documents, write them with
+                clarity, and build one that gets read.
+              </p>
+              <p>
+                Show results, not adjectives. Be truthful. Proofread twice. May
+                the best CV win.
+              </p>
+            </div>
+          </div>
+        </div>
+        <ol class="toc">
+          <li><a href="#basics">Three documents</a></li>
+          <li><a href="#anatomy">Anatomy of a CV</a></li>
+          <li><a href="#write">Write it well</a></li>
+          <li><a href="#dos">Dos and don’ts</a></li>
+          <li><a href="#examples">Good vs bad</a></li>
+          <li><a href="#build">Build yours</a></li>
+        </ol>
+        <h2>Three documents, three jobs</h2>
+        <p>
+          People mix these up. Sending the wrong one is the first mistake a
+          recruiter notices.
+        </p>
+        <div class="grid3">
+          <div class="card">
+            <h3>Resume</h3>
+            <dl>
+              <dt>What it is</dt>
+              <dd>
+                A tight summary of your best, most relevant experience and
+                skills.
+              </dd>
+              <dt>Length</dt>
+              <dd>One to two pages at most; one page is ideal for students.</dd>
+              <dt>Use it for</dt>
+              <dd>
+                Most jobs and internships, especially in tech and business.
+              </dd>
+              <dt>Changes</dt>
+              <dd>Tailor it for every role.</dd>
+            </dl>
+          </div>
+          <div class="card">
+            <h3>CV (curriculum vitae)</h3>
+            <dl>
+              <dt>What it is</dt>
+              <dd>
+                A complete record of your education, projects, research, awards
+                and certifications.
+              </dd>
+              <dt>Length</dt>
+              <dd>
+                No fixed limit: often 1–2 pages early on, longer as your record
+                grows.
+              </dd>
+              <dt>Use it for</dt>
+              <dd>
+                Academia, research, scholarships, and some countries where “CV”
+                means resume.
+              </dd>
+              <dt>Changes</dt>
+              <dd>Add to it; reorder to suit the reader.</dd>
+            </dl>
+          </div>
+          <div class="card">
+            <h3>Cover letter</h3>
+            <dl>
+              <dt>What it is</dt>
+              <dd>
+                A short letter explaining why you want this role at this
+                company, and why you fit.
+              </dd>
+              <dt>Length</dt>
+              <dd>
+                Half to three quarters of a page, three or four paragraphs.
+              </dd>
+              <dt>Use it for</dt>
+              <dd>
+                Alongside a resume or CV, whenever an application allows it.
+              </dd>
+              <dt>Changes</dt>
+              <dd>Write a new one every time.</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="callout">
+          <strong>Rule of thumb:</strong> the resume shows what you did, the
+          cover letter shows why it matters to this employer, and the CV is the
+          full archive you pull from.
+        </div>
+        <h3 class="sub">Resume vs CV at a glance</h3>
+        <div class="tw">
+          <table class="cmp">
+            <tr>
+              <th></th>
+              <th>Resume</th>
+              <th>CV</th>
+            </tr>
+            <tr>
+              <td>Name origin</td>
+              <td>French for “summary”</td>
+              <td>Latin for “course of life”</td>
+            </tr>
+            <tr>
+              <td>Purpose</td>
+              <td>Win a job by quickly showing you fit this role</td>
+              <td>
+                Give an objective record of your academic and professional
+                record
+              </td>
+            </tr>
+            <tr>
+              <td>Used for</td>
+              <td>Job and internship applications</td>
+              <td>
+                Academic, research, scholarship and programme applications
+              </td>
+            </tr>
+            <tr>
+              <td>Length</td>
+              <td>1–2 pages, no more</td>
+              <td>No minimum or maximum</td>
+            </tr>
+            <tr>
+              <td>Tailoring</td>
+              <td>Rewrite for each role</td>
+              <td>Keep complete; choose what to emphasise per reader</td>
+            </tr>
+            <tr>
+              <td>Style</td>
+              <td>Short, punchy, skimmable</td>
+              <td>Plain, well organised, easy to follow</td>
+            </tr>
+          </table>
+        </div>
+        <h3 class="sub">How long should it be?</h3>
+        <div class="meter">
+          <div>Resume<b style="width: 14%; min-width: 110px">1–2 pages</b></div>
+          <div>
+            Early CV<b style="width: 16%; min-width: 110px">1–2 pages</b>
+          </div>
+          <div>Growing CV<b style="width: 45%">3–6 pages</b></div>
+          <div>
+            Senior CV<b style="width: 100%"
+              >no limit, as long as the record needs</b
+            >
+          </div>
+        </div>
+        <p>
+          Recruiters screen hundreds of candidates, so a six-page document sent
+          for a job application tends to go unread. Match the length to the
+          reader.
+        </p>
+      </section>
+
+      <section class="view" id="v-anatomy">
+        <h2>Anatomy of a CV</h2>
+        <p class="lead">
+          Most CVs use five headings. Open each one to see what belongs there.
+          Inside every section, put the newest item first.
+        </p>
+        <div class="chips">
+          <span>Easy-to-read font such as Arial or Helvetica</span
+          ><span>Size 11–12 pt</span
+          ><span>Margins 0.5–1 inch, all consistent</span
+          ><span>Go easy on bold, italics and bullets</span
+          ><span>Proofread for typos</span>
+        </div>
+        <div class="acc">
+          <details open style="--c: #028090">
+            <summary>Personal information</summary>
+            <div>
+              <p>
+                Your name, title and contact details: address, email and phone
+                number.
+              </p>
+              <p class="av">
+                <b>Leave out:</b> ID or social security numbers, marital status,
+                nationality, sexual orientation and religious beliefs. Local
+                norms differ, so check what employers in your country expect.
+              </p>
+            </div>
+          </details>
+          <details style="--c: #00a896">
+            <summary>Education and awards</summary>
+            <div>
+              <p>
+                Put your latest degree first with the graduation date, or the
+                expected date. Add your thesis if you have an advanced degree.
+                Scholarships and grants go here too.
+              </p>
+              <p class="av">
+                <b>Trim as you grow:</b> school-era honours start to look like
+                filler once you’re further along. Ask who is reading and what
+                they care about.
+              </p>
+            </div>
+          </details>
+          <details style="--c: #02c39a">
+            <summary>Experience</summary>
+            <div>
+              <p>
+                Group entries if it helps (work, research, volunteering). For
+                each one say what you did, where, for how long, and who
+                supervised you in research or shadowing. The point is to
+                <b>show</b> traits, not claim them: don’t write “hard-working”,
+                describe work that proves it.
+              </p>
+              <p>
+                <b>Tech students:</b> add a Projects group with links to GitHub
+                or a live demo.
+              </p>
+              <p class="av">
+                <b>Never exaggerate.</b> Everything on your document is fair
+                game in an interview, and references can be checked.
+              </p>
+            </div>
+          </details>
+          <details style="--c: #028090">
+            <summary>Extracurricular activities</summary>
+            <div>
+              <p>
+                Clubs, leadership and events you helped organise. State your
+                role, how long you were involved and roughly how many hours a
+                week you gave. If you started something from nothing, verbs like
+                “founded” or “established” fit.
+              </p>
+            </div>
+          </details>
+          <details style="--c: #00a896">
+            <summary>Publications and presentations</summary>
+            <div>
+              <p>
+                Group by type: peer-reviewed papers, other publications, talks,
+                posters. With very little to list, make it a subheading under
+                research.
+              </p>
+              <p class="av">
+                <b>Skip padding:</b> routine class presentations don’t count,
+                and a project should be listed once even if it became a poster
+                and a paper.
+              </p>
+            </div>
+          </details>
+          <details style="--c: #02c39a">
+            <summary>Optional extras</summary>
+            <div>
+              <p>
+                Certifications, or societies and interest groups. The same rules
+                apply: organised, short, no repeats, no fluff.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="view" id="v-write">
+        <h2>Write it well</h2>
+        <p class="lead">
+          Strong documents come from how you describe things, often more than
+          from what you did.
+        </p>
+        <h3 class="sub">Level up one bullet</h3>
+        <div class="seg" data-for="lad"></div>
+        <div class="card" id="ladbox"></div>
+        <h3 class="sub">Action verbs that convey “doing”</h3>
+        <div class="chips">
+          <span
+            ><b>Lead:</b> led, founded, organised, coordinated, mentored</span
+          ><span
+            ><b>Build:</b> built, designed, developed, launched, automated</span
+          ><span><b>Improve:</b> improved, reduced, streamlined, increased</span
+          ><span
+            ><b>Investigate:</b> investigated, analysed, tested, surveyed</span
+          ><span><b>Share:</b> presented, taught, wrote, trained</span>
+        </div>
+        <h3 class="sub">Show, don’t say</h3>
+        <div class="tw">
+          <table class="cmp">
+            <tr>
+              <th>Claim</th>
+              <th>Evidence</th>
+            </tr>
+            <tr>
+              <td>Hard-working</td>
+              <td>
+                Kept a 3.6 GPA while working 15 hours a week at a campus lab
+              </td>
+            </tr>
+            <tr>
+              <td>Good leader</td>
+              <td>Led 6 officers to run four workshops in one semester</td>
+            </tr>
+            <tr>
+              <td>Team player</td>
+              <td>
+                Co-built a Telegram bot with 3 teammates, each owning one
+                workflow
+              </td>
+            </tr>
+          </table>
+        </div>
+        <h3 class="sub">A cover letter in four short parts</h3>
+        <div class="steps">
+          <div class="card">
+            <h3>1 · Hook</h3>
+            Name the role and one sharp reason you want this company.
+          </div>
+          <div class="card">
+            <h3>2 · Proof</h3>
+            One or two achievements with numbers.
+          </div>
+          <div class="card">
+            <h3>3 · Fit</h3>
+            What you’d bring to their team and goals.
+          </div>
+          <div class="card">
+            <h3>4 · Close</h3>
+            A clear next step, then thanks.
+          </div>
+        </div>
+        <div class="callout">
+          <strong>Truth rule:</strong> never lie or inflate. If you can’t talk
+          about it confidently in an interview, don’t put it on the page.
+        </div>
+      </section>
+
+      <section class="view" id="v-dos">
+        <h2>Dos and don’ts</h2>
+        <div class="seg" data-for="dos"></div>
+        <div class="two" id="dosbox"></div>
+      </section>
+
+      <section class="view" id="v-examples">
+        <h2>Good vs bad, side by side</h2>
+        <p>Same person, same experience. Only the writing changes.</p>
+        <div class="seg" data-for="ex"></div>
+        <div class="two" id="exbox"></div>
+      </section>
+
+      <section class="view" id="v-build">
+        <h2>Build yours</h2>
+        <p class="lead">
+          Choose a template, reorder the sections, decide which details and
+          photo to show, then export. Everything stays in your browser.
+        </p>
+        <div class="builder">
+          <form id="bform" onsubmit="return false;"></form>
+          <div class="preview"><div class="paper" id="pv"></div></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        <p>
+          CV vs resume and CV structure adapted from Med School Insiders:
+          <a href="https://youtu.be/tHQXZJ2f00Y">the video</a> and
+          <a href="https://medschoolinsiders.com/pre-med/cv-vs-resume/"
+            >the companion article</a
+          >. Cover letter and tech-student tips are TechBridge additions.
+        </p>
+        TechBridge · Stamford University tech club · Never send AI-written text
+        you haven’t read and verified.
+        <p>
+          Unofficial fan-style space theme. Not affiliated with Lucasfilm or
+          Disney.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/builder.js"></script>
+    <script src="js/space.js"></script>
+  </body>
+</html>
