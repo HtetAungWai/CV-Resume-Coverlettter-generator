@@ -2,9 +2,7 @@
 
 An interactive workshop site and document builder for **CVs, resumes and cover letters**, built for a TechBridge university tech club workshop. Plain HTML, CSS and JavaScript: no build step, no backend, no cost.
 
-## Theme
 
-A space-opera look: animated starfield with a hyperspace jump between tabs, an opening-crawl intro, glowing top navigation and scroll reveals. It respects `prefers-reduced-motion`. It is an unofficial fan-style theme: it uses no official logos, artwork or fonts, and is not affiliated with Lucasfilm or Disney.
 
 ## What it does
 
@@ -32,19 +30,6 @@ A space-opera look: animated starfield with a hyperspace jump between tabs, an o
 
 Photos suit some countries and not others, so the photo is off by default. For documents with a photo, use the **PDF** export; Word may not display embedded photos.
 
-## Run it
-
-Open `index.html` in a browser, or serve the folder:
-
-```bash
-python3 -m http.server 8000   # then visit http://localhost:8000
-```
-
-## Deploy on GitHub Pages
-
-1. Push this folder to a GitHub repository.
-2. Go to **Settings, Pages**, choose **Deploy from a branch**, select `main` and `/ (root)`.
-3. Your site appears at `https://<username>.github.io/<repo>/`.
 
 ## Enable the AI assistant
 
@@ -54,17 +39,6 @@ No login and no API key for users. The page sends the request to a small Cloudfl
 Browser --(prompt)--> Cloudflare Worker --> limits check --> OpenRouter free model --> text back
 ```
 
-1. **Deploy the Worker.** Sign up at [cloudflare.com](https://www.cloudflare.com) (free plan). Go to **Workers & Pages, Create, Hello World**, name it `tb-cv-ai`, **Deploy**, then **Edit code**, replace everything with `worker/worker.js` and **Deploy** again. (CLI alternative: `cd worker && npx wrangler deploy`.)
-2. **Add the key as a secret.** In the Worker, **Settings, Variables and Secrets, Add**: type **Secret**, name `OPENROUTER_KEY`, value = your key from [openrouter.ai](https://openrouter.ai) (Keys, Create Key). Deploy again.
-3. **Connect the page.** Copy the Worker URL (`https://tb-cv-ai.<subdomain>.workers.dev`) into `js/config.js`. Opening that URL in a browser should show `{"error":"POST only."}`, which means it is live. Push to GitHub.
-
-| Protection | How |
-|---|---|
-| API key never reaches the browser | It lives only as a Worker secret |
-| Cost and abuse control | Fixed free model, prompt length cap, daily limit per visitor (IP) and overall |
-| Optional | `ORIGINS` in `worker.js` rejects other websites; a KV namespace named `LIMITS` makes the daily limits durable |
-
-Without login, anyone who finds the Worker URL can call it, and all visitors share one free OpenRouter quota. Without the KV namespace the limits are best-effort (they can reset when Cloudflare restarts the Worker). Treat this as a demo-grade setup and add sign-in later if you open the site to the public.
 
 ## Project structure
 
